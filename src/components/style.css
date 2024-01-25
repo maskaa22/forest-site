@@ -1,0 +1,304 @@
+.container {
+  max-width: 85%;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.height100 {
+  height: 100%;
+}
+
+.margin-l7 {
+  margin-left: 7.5%;
+}
+
+.margin-r7 {
+  margin-right: 7%;
+}
+
+/* MENU*/
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__nav li {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  padding: 1rem;
+  font-family: "Zilla Slab";
+  cursor: pointer;
+  font-size: 1.2vw;
+}
+
+.header__nav {
+  width: 100%;
+}
+
+.header__nav a {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.header {
+  width: 100%;
+  position: absolute;
+  bottom: 7%;
+  left: 0;
+  right: 0;
+
+}
+
+.header__nav li:hover {
+  background-color: #7f7c7d61;
+}
+
+/*ABOUT*/
+.about,
+.benefit,
+.galery,
+.news,
+.contact {
+  width: 100%;
+  height: 600px;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-content {
+  padding-top: 80px;
+  width: 40%;
+}
+
+.about-content h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.about-content span {
+  display: block;
+}
+
+.about-content p {
+  color: rgb(128, 127, 127);
+  padding-top: 40px;
+  letter-spacing: .01rem;
+  font-size: 17px;
+  width: 90%;
+  text-align: justify;
+}
+
+.about,
+.benefit {
+  background-image: url('../../public/img/klipartz.com.png');
+}
+
+.about-image {
+  position: relative;
+}
+
+.img-anim-1 {
+  /* left: -70px; */
+  left: -10%;
+  position: absolute;
+  top: 10%;
+}
+
+.img-anim-2 {
+  left: 30%;
+  position: absolute;
+  top: 20%;
+}
+/*BENEFIT*/
+.benefit-img-anim-1 {
+  /* left: -70px; */
+  left: 60%;
+  position: absolute;
+  top: 10%;
+}
+
+.benefit-img-anim-2 {
+  left: 17%;
+  position: absolute;
+  top: 20%;
+}
+.benefit-img-left {
+  padding-top: 2%;
+}
+.benefit-margin-l {
+  margin-left: 9%;
+}
+
+
+/*GALERY*/
+.width100 {
+  width: 100%;
+}
+
+.galery {
+  position: relative;
+}
+
+/* .galery {
+  background-image: url('../../public/img/galery-big.jpg');
+} */
+.position-foto-box {
+  position: relative;
+  bottom: 100%;
+}
+
+.container-foto {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  height: 100%;
+  /* width: 85%;
+    margin-left: 7%; */
+}
+
+.item-1 {
+  grid-column-start: 1;
+  grid-column-end: 1;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.item-3 {
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+/*NEWS*/
+.news {
+  background-image: url('../../public/img/floresta-bg.jpg');
+  height: 530px;
+}
+
+.container-news {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  height: 100%;
+  /* padding: 20px 0; */
+}
+
+.news-item {
+  background-color: white;
+  padding: 7% 0;
+}
+
+.padding7 {
+  padding: 7% 0;
+}
+
+.news-icon {
+  height: 50%;
+  font-size: 20vh;
+  color: #45a144;
+}
+
+.icon-color-yellow {
+  color: #ddf64f;
+}
+
+.icon-color-broun {
+  color: #85714d;
+}
+
+.news-h4 {
+  text-align: center;
+  padding: 2vh 0 3vh;
+  font-size: 4vh;
+}
+
+.news-p {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 3vh;
+  text-align: center;
+  color: rgb(128, 127, 127);
+}
+
+/*CONTACT*/
+.contact {
+  height: 400px;
+  position: relative;
+  background-image: url('../../public/img/klipartz-foter.com.png');
+}
+
+.contact-block-info {
+  height: 400px;
+  width: 400px;
+  background-color: #cdcdcd7a;
+  /* position: relative;
+  top: -60px; */
+  border-radius: 50%;
+}
+
+.contact-block-send {
+  padding: 7% 0 0 7%;
+}
+
+.contact-h3 {
+  font-size: 5vh;
+
+}
+
+.contact-p {
+  padding-top: 2%;
+  padding-bottom: 5%;
+  text-align: justify;
+  text-transform: uppercase;
+}
+
+.contact-input {
+  outline: none;
+  width: 85%;
+  height: 6vh;
+  border-color: #78ac20;
+}
+
+.contact-button {
+  height: 6vh;
+  width: 15%;
+  border: none;
+  background-color: #78ac20;
+  color: white;
+  cursor: pointer;
+}
+
+/*FOTER*/
+.foter {
+  height: 60px;
+  width: 100%;
+  background-color: #78ac20;
+}
+
+.foter-logo {
+  width: 5%;
+}
+
+.left-foter,
+.rigth-foter {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  color: white;
+}
+
+.rigth-foter {
+  cursor: pointer;
+}
