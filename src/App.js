@@ -1,4 +1,3 @@
-
 import './App.css';
 import About from './components/About';
 import Contact from './components/Contact';
@@ -11,13 +10,13 @@ import Foter from './components/Foter';
 function App() {
   return (
     <div className="App">
-      <Header/>
-      <About/>
-      <Galery/>
-      <Benefit/>
-      <News/>
-      <Contact/>
-      <Foter/>
+      <Header />
+      <About />
+      <Galery />
+      <Benefit />
+      <News />
+      <Contact />
+      <Foter />
     </div>
   );
 }

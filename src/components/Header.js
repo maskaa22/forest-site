@@ -1,10 +1,9 @@
-
 import Menu from './Menu';
 import './style-header.css';
 
 function Header() {
 
-  window.onload = function() {
+  window.onload = function () {
     document.addEventListener('mousemove', e => {
       Object.assign(document.documentElement, {
         style: `
@@ -13,11 +12,11 @@ function Header() {
         `
       })
     })
- };
+  };
 
   return (
     <div className='header-body'>
-      <img className='logo' src={'./logo11.png'} alt='header 3D'/>
+      <img className='logo' src={'./logo11.png'} alt='header 3D' />
       <section className='layers'>
         <div className='layers__container'>
           <div className='layers__item layer-1 img7'></div>
@@ -32,10 +31,9 @@ function Header() {
               <h1>Natural Forest <span>beauty</span></h1>
               <div className='hero-contant__p'>Preservation of nature is one of the most important tasks</div>
               <a className='button-start' href='#contact'>Contact us</a>
-              <Menu/>
+              <Menu />
             </div>
           </div>
-          
         </div>
       </section>
     </div>
