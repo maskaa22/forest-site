@@ -1,17 +1,42 @@
 import './style.css';
 import { Element } from 'react-scroll';
+import React, {useLayoutEffect} from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 function Benefit() {
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  useLayoutEffect(() => {
+    gsap.to('.anim-rigth-benefit', {
+      opacity: 1, 
+      translateX: '18%',
+      duration: 3,
+      scrollTrigger: {
+        trigger: '.anim-rigth-benefit'
+      }
+    });
+    gsap.to('.anim-left-benefit', {
+      opacity: 1, 
+      translateX: '-17%',
+      duration: 3,
+      scrollTrigger: {
+        trigger: '.anim-left-benefit'
+      }
+    });
+  }, []);
+
   return (
     <Element name='benefit'>
       <div className='benefit' id='benefit'>
         <div className='flex-between height100'>
           <div className='about-image height100'>
             <img src={'./img/benefit-img.jpg'} className='height100 benefit-img-left' alt='mountains' />
-            <img src={'./img/green-forest.jpg'} className='benefit-img-anim-1' alt='green forest' />
-            <img src={'./img/yellow-forest.jpg'} className='benefit-img-anim-2' alt='yellow forest' />
+            <img src={'./img/green-forest.jpg'} className='benefit-img-anim-1 anim-rigth-benefit' alt='green forest' />
+            <img src={'./img/yellow-forest.jpg'} className='benefit-img-anim-2 anim-rigth-benefit' alt='yellow forest' />
           </div>
-          <div className='about-content margin-r7'>
+          <div className='about-content margin-r7 anim-left-benefit'>
             <h2 className='benefit-margin-l'>Benefits of forests </h2>
             <p className='benefit-margin-l'>The forest strengthens the body and soul, provides mushrooms,
               berries and medicinal plants, provides firewood,
