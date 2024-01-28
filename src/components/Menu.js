@@ -1,10 +1,20 @@
 import './style.css';
+import './style@media.css';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
+import { GiHamburgerMenu } from 'react-icons/gi';
 
 function Menu() {
 
   const [isOpen, setOpen] = useState();
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add('body-overflow-hiden');
+    } else if (!isOpen) {
+      document.body.classList.remove('body-overflow-hiden');
+    }
+  }, [isOpen]);
 
   return (
     <div className='header'>
@@ -27,6 +37,7 @@ function Menu() {
               <Link to="contact" smooth={true} onClick={() => setOpen(!isOpen)}>Contact us</Link>
             </li>
           </ul>
+          <button className='header__menu-button' onClick={() => setOpen(!isOpen)}><GiHamburgerMenu /></button>
         </div>
       </div>
     </div>

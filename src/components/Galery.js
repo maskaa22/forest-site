@@ -1,4 +1,5 @@
 import './style.css';
+import './style@media.css';
 import { Element } from 'react-scroll';
 
 function Galery() {
@@ -6,12 +7,12 @@ function Galery() {
   return (
     <Element name='galery'>
       <div className='galery' id='galery'>
-        <div className='flex-center height100'><img src={'./img/galery-big.jpg'} className='width100' alt='baground' /></div>
+        <div className='flex-center height100'><img src={'./img/galery-big.jpg'} className='width100 b-i-media-none' alt='baground' /></div>
         <div className='container position-foto-box'>
           <div className='container-foto'>
             <div className='item-1 section'>
-            <div className='image'><img src={'./img/Kaniv.jpeg'} className='width100' alt='Kaniv' /> </div>
-            <div className='text'>
+              <div className='image'><img src={'./img/Kaniv.jpeg'} className='width100' alt='Kaniv' /> </div>
+              <div className='text'>
                 <h3 className='h3'>Olena Studio</h3>
               </div>
             </div>
@@ -21,9 +22,9 @@ function Galery() {
                 <h3 className='h3'>Olena Studio</h3>
               </div>
             </div>
-            <div className='item-3 section'> 
-            <img src={'./img/Verhovuna.jpg'} className='width100' alt='Verhovuna' />
-            <div className='text'>
+            <div className='item-3 section'>
+              <img src={'./img/Verhovuna.jpg'} className='width100' alt='Verhovuna' />
+              <div className='text'>
                 <h3 className='h3'>Olena Studio</h3>
               </div>
             </div>
@@ -32,7 +33,7 @@ function Galery() {
               <div className='text'>
                 <h3 className='h3'>Olena Studio</h3>
               </div>
-              </div>
+            </div>
           </div>
         </div>
       </div>

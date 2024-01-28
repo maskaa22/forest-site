@@ -1,16 +1,17 @@
 import './style.css';
+import './style@media.css';
 import { Element } from 'react-scroll';
-import React, {useLayoutEffect} from 'react';
+import React, { useLayoutEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 function About() {
- 
- gsap.registerPlugin(ScrollTrigger);
+
+  gsap.registerPlugin(ScrollTrigger);
 
   useLayoutEffect(() => {
     gsap.to('.anim-rigth-about', {
-      opacity: 1, 
+      opacity: 1,
       translateX: '18%',
       duration: 3,
       scrollTrigger: {
@@ -18,7 +19,7 @@ function About() {
       }
     });
     gsap.to('.anim-left-about', {
-      opacity: 1, 
+      opacity: 1,
       translateX: '-5%',
       duration: 3,
       scrollTrigger: {

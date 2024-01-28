@@ -1,4 +1,5 @@
 import './style.css';
+import './style@media.css';
 import { Element } from 'react-scroll';
 
 function Contact() {
@@ -6,7 +7,7 @@ function Contact() {
     <Element name='contact'>
       <div className='contact' id='contact'>
         <div className='container'>
-          <div className='flex-between'>
+          <div className='flex-between-contact'>
             <div className='contact-block-info'>
               <img src={'./img/Lovepik_com-450090283-Tree Vector.png'} className='height100' alt='tree' />
             </div>

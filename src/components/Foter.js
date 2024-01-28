@@ -1,4 +1,5 @@
 import './style.css';
+import './style@media.css';
 import { MdOutlineCopyright } from "react-icons/md";
 import { IoLogoGithub } from "react-icons/io";
 import { IoLogoInstagram } from "react-icons/io";
@@ -8,7 +9,7 @@ function Foter() {
   return (
     <div className='foter'>
       <div className='container'>
-        <div className='flex-between'>
+        <div className='flex-between-foter footer-h-100'>
           <div className='left-foter'>
             <img className='foter-logo' src={'./logo11.png'} alt='LOGO' />
             <div>Copyright <MdOutlineCopyright /> 2024 by Mariia Skydan</div>
