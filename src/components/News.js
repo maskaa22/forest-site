@@ -1,33 +1,35 @@
-import './style.css';
-import { GiWoodPile } from "react-icons/gi";
-import { GiLindenLeaf } from "react-icons/gi";
-import { GiCoins } from "react-icons/gi";
+import { GiWoodPile, GiLindenLeaf, GiCoins } from 'react-icons/gi';
 import { Element } from 'react-scroll';
+
+const NEWS = [
+  { Icon: GiWoodPile, tone: 'bark', title: 'Protest', text: 'A protest against deforestation is taking place' },
+  { Icon: GiLindenLeaf, tone: '', title: 'Action', text: 'The campaign of planting new trees has started' },
+  { Icon: GiCoins, tone: 'sun', title: 'Offer', text: 'The collection for the purchase of seeds is open' },
+];
 
 function News() {
   return (
     <Element name='news'>
-      <div className='news' id='news'>
-        <div className='container padding7'>
-          <div className='container-news '>
-            <div className='news-item'>
-              <div className='flex-center news-icon'><GiWoodPile className='icon-color-broun' /></div>
-              <h4 className='news-h4'>Protest</h4>
-              <p className='news-p'>A protest against deforestation is taking place</p>
-            </div>
-            <div className='news-item'>
-              <div className='flex-center news-icon'><GiLindenLeaf /></div>
-              <h4 className='news-h4'>Action</h4>
-              <p className='news-p'>The campaign of planting new trees has started</p>
-            </div>
-            <div className='news-item'>
-              <div className='flex-center news-icon'><GiCoins className='icon-color-yellow' /></div>
-              <h4 className='news-h4'>Offer</h4>
-              <p className='news-p'>The collection for the purchase of seeds is open</p>
-            </div>
+      <section className='section news' id='news'>
+        <div className='wrap'>
+          <div className='section-head reveal'>
+            <span className='eyebrow'>News</span>
+            <h2 className='section-title'>What's <em>happening</em> now</h2>
+          </div>
+          <div className='news-grid'>
+            {NEWS.map(({ Icon, tone, title, text }, i) => (
+              <article className='news-card reveal' key={title} style={{ '--delay': `${i * 0.12}s` }}>
+                <div className={`news-card__icon ${tone ? `news-card__icon--${tone}` : ''}`}><Icon /></div>
+                <div className='news-card__body'>
+                  <div className='news-card__tag'>Update</div>
+                  <h4>{title}</h4>
+                  <p>{text}</p>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
-      </div>
+      </section>
     </Element>
   );
 }

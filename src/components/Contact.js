@@ -1,28 +1,37 @@
-import './style.css';
-import './style@media.css';
+import { useState } from 'react';
 import { Element } from 'react-scroll';
 
 function Contact() {
+  const [sent, setSent] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSent(true);
+    e.target.reset();
+  };
+
   return (
     <Element name='contact'>
-      <div className='contact' id='contact'>
-        <div className='container'>
-          <div className='flex-between-contact'>
-            <div className='contact-block-info'>
-              <img src={'./img/Lovepik_com-450090283-Tree Vector.png'} className='height100' alt='tree' />
+      <section className='section contact' id='contact'>
+        <div className='wrap'>
+          <div className='contact-card reveal'>
+            <div className='contact-art'>
+              <img src={'./img/Lovepik_com-450090283-Tree Vector.png'} alt='tree' />
             </div>
-            <div className='contact-block-send'>
-              <h3 className='contact-h3'>NEWSLETTER SIGN UP</h3>
-              <p className='contact-p'>Write your mail and we will definitely answer you,
+            <div>
+              <span className='eyebrow'>Contact us</span>
+              <h3>Newsletter sign up</h3>
+              <p>Write your mail and we will definitely answer you,
                 and you will also receive the latest news - the first!</p>
-              <div className='flex-center'>
-                <input className='contact-input' />
-                <button className='contact-button'>SEND</button>
-              </div>
+              <form className='contact-form' onSubmit={handleSubmit}>
+                <input type='email' name='email' placeholder='Your email' aria-label='Your email' required />
+                <button type='submit'>SEND</button>
+              </form>
+              {sent && <p className='contact-thanks' role='status'>Thank you! We will be in touch.</p>}
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </Element>
   );
 }

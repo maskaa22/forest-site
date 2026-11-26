@@ -1,42 +1,35 @@
-import './style.css';
-import './style@media.css';
 import { Element } from 'react-scroll';
 
-function Galery() {
+const PHOTOS = [
+  { src: './img/Kaniv.jpeg', title: 'Kaniv', className: 'gallery-card--tall' },
+  { src: './img/Синевир.jpg', title: 'Synevyr', className: 'gallery-card--wide' },
+  { src: './img/Verhovuna.jpg', title: 'Verkhovyna', className: '' },
+  { src: './img/Dzvinlovski.jpg', title: 'Dzvinlovski', className: '' },
+];
 
+function Galery() {
   return (
     <Element name='galery'>
-      <div className='galery' id='galery'>
-        <div className='flex-center height100'><img src={'./img/galery-big.jpg'} className='width100 b-i-media-none' alt='baground' /></div>
-        <div className='container position-foto-box'>
-          <div className='container-foto'>
-            <div className='item-1 section'>
-              <div className='image'><img src={'./img/Kaniv.jpeg'} className='width100' alt='Kaniv' /> </div>
-              <div className='text'>
-                <h3 className='h3'>Olena Studio</h3>
-              </div>
-            </div>
-            <div className='item-2  section-top'>
-              <div className='image'><img src={'./img/Синевир.jpg'} className='width100' alt='Синевир' /> </div>
-              <div className='text text-top'>
-                <h3 className='h3'>Olena Studio</h3>
-              </div>
-            </div>
-            <div className='item-3 section'>
-              <img src={'./img/Verhovuna.jpg'} className='width100' alt='Verhovuna' />
-              <div className='text'>
-                <h3 className='h3'>Olena Studio</h3>
-              </div>
-            </div>
-            <div className='item-4 section'>
-              <img src={'./img/Dzvinlovski.jpg'} className='width100' alt='Dzvinlovski' />
-              <div className='text'>
-                <h3 className='h3'>Olena Studio</h3>
-              </div>
-            </div>
+      <section className='section gallery' id='galery'>
+        <div className='wrap'>
+          <div className='section-head reveal'>
+            <span className='eyebrow'>Gallery</span>
+            <h2 className='section-title'>Places worth <em>protecting</em></h2>
+          </div>
+          <div className='gallery-grid'>
+            {PHOTOS.map((photo, i) => (
+              <figure
+                key={photo.title}
+                className={`gallery-card reveal ${photo.className}`}
+                style={{ '--delay': `${i * 0.1}s` }}
+              >
+                <img src={photo.src} alt={photo.title} loading='lazy' />
+                <figcaption>{photo.title}</figcaption>
+              </figure>
+            ))}
           </div>
         </div>
-      </div>
+      </section>
     </Element>
   );
 }
